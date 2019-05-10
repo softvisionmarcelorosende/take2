@@ -18,5 +18,12 @@ namespace tst
             var result = _sut.Index();
             Assert.IsType<ViewResult>(result);
         }
+
+        [Fact]
+        public void ShowPrivacy()
+        {
+            var result = _sut.Privacy();
+            Assert.IsType<ViewResult>(result);
+        }
     }
 }
