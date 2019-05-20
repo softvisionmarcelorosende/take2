@@ -3,12 +3,19 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>171121ef-8bf7-4b7f-8c0c-aca6f84f1f48</UserSecretsId>
   </PropertyGroup>
 
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" Version="1.0.0-preview-008520001" />
   </ItemGroup>
+
+  <Target Name="Export file" AfterTargets="Build">
+    <Message Text="Export the configurations to a temp file. " />
+    <Exec WorkingDirectory="$(MSBuildProjectDirectory)" Condition="$(ConnectionString) != ''" Command="az appconfig kv export --destination file --path $(OutDir)\azureappconfig.json --format json --separator : --connection-string $(ConnectionString) --yes" />
+  </Target>
 
 </Project>

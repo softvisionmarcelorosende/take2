@@ -1,8 +1,21 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        background-color: @Configuration["Take2:Settings:BackgroundColor"]
+    }
+    h1 {
+        color: @Configuration["Take2:Settings:FontColor"];
+        font-size: @Configuration["Take2:Settings:FontSize"];
+    }
+</style>
+<head>
+    <title>Index View</title>
+</head>
+<body>
+    <h1>@Configuration["Take2:Settings:Message"]</h1>
+</body>
+</html>
