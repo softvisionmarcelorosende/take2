@@ -23,7 +23,7 @@ steps:
   displayName: 'dotnet restore'
 # Same as CLI dotnet build - Builds the app  
 - script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+  displayName: 'dotnet build'
 # Run the tests found in the app directory
 - script: dotnet test
   displayName: 'dotnet test'
