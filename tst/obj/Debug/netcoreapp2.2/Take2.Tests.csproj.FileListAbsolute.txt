@@ -1,7 +1,3 @@
-C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.csprojAssemblyReference.cache
-C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.csproj.CoreCompileInputs.cache
-C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.AssemblyInfoInputs.cache
-C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.AssemblyInfo.cs
 C:\Users\Marcelo Rosende\code\Take2\tst\bin\Debug\netcoreapp2.2\Take2.Source.Views.dll
 C:\Users\Marcelo Rosende\code\Take2\tst\bin\Debug\netcoreapp2.2\Take2.Source.Views.pdb
 C:\Users\Marcelo Rosende\code\Take2\tst\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -14,6 +10,10 @@ C:\Users\Marcelo Rosende\code\Take2\tst\bin\Debug\netcoreapp2.2\Take2.Tests.dll
 C:\Users\Marcelo Rosende\code\Take2\tst\bin\Debug\netcoreapp2.2\Take2.Tests.pdb
 C:\Users\Marcelo Rosende\code\Take2\tst\bin\Debug\netcoreapp2.2\Take2.Source.dll
 C:\Users\Marcelo Rosende\code\Take2\tst\bin\Debug\netcoreapp2.2\Take2.Source.pdb
+C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.csprojAssemblyReference.cache
+C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.AssemblyInfoInputs.cache
+C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.AssemblyInfo.cs
 C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.csproj.CopyComplete
 C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.dll
 C:\Users\Marcelo Rosende\code\Take2\tst\obj\Debug\netcoreapp2.2\Take2.Tests.pdb
