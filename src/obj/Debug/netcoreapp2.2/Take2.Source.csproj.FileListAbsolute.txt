@@ -5,7 +5,6 @@ C:\Users\Marcelo Rosende\code\take2\src\bin\Debug\netcoreapp2.2\Take2.Source.dll
 C:\Users\Marcelo Rosende\code\take2\src\bin\Debug\netcoreapp2.2\Take2.Source.pdb
 C:\Users\Marcelo Rosende\code\take2\src\bin\Debug\netcoreapp2.2\Take2.Source.Views.dll
 C:\Users\Marcelo Rosende\code\take2\src\bin\Debug\netcoreapp2.2\Take2.Source.Views.pdb
-C:\Users\Marcelo Rosende\code\take2\src\obj\Debug\netcoreapp2.2\Take2.Source.csprojAssemblyReference.cache
 C:\Users\Marcelo Rosende\code\take2\src\obj\Debug\netcoreapp2.2\Take2.Source.csproj.CoreCompileInputs.cache
 C:\Users\Marcelo Rosende\code\take2\src\obj\Debug\netcoreapp2.2\Take2.Source.RazorAssemblyInfo.cache
 C:\Users\Marcelo Rosende\code\take2\src\obj\Debug\netcoreapp2.2\Take2.Source.RazorAssemblyInfo.cs

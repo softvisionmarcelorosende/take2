@@ -1,7 +1,7 @@
 {
   "Take2": {
     "Settings": {
-      "BackgroundColor": "White",
+      "BackgroundColor": "Blue",
       "FontColor": "Black",
       "FontSize": "128",
       "Message": "Hello From Azure App Config World"
