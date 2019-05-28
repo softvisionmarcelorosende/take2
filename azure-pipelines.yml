@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  buildConfiguration: 'RELEASE'
+  buildConfiguration: 'Release'
 
 steps:
 # Task to install the DotNet Core version to run this yml 
