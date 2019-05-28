@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcelo Rosende\\code\\take2\\tst\\Take2.Tests.csproj": {}
+    "C:\\Users\\Marcelo Rosende\\code\\Take2\\tst\\Take2.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcelo Rosende\\code\\take2\\src\\Take2.Source.csproj": {
+    "C:\\Users\\Marcelo Rosende\\code\\Take2\\src\\Take2.Source.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcelo Rosende\\code\\take2\\src\\Take2.Source.csproj",
+        "projectUniqueName": "C:\\Users\\Marcelo Rosende\\code\\Take2\\src\\Take2.Source.csproj",
         "projectName": "Take2.Source",
-        "projectPath": "C:\\Users\\Marcelo Rosende\\code\\take2\\src\\Take2.Source.csproj",
+        "projectPath": "C:\\Users\\Marcelo Rosende\\code\\Take2\\src\\Take2.Source.csproj",
         "packagesPath": "C:\\Users\\Marcelo Rosende\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcelo Rosende\\code\\take2\\src\\obj\\",
+        "outputPath": "C:\\Users\\Marcelo Rosende\\code\\Take2\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\Marcelo Rosende\\code\\take2\\tst\\Take2.Tests.csproj": {
+    "C:\\Users\\Marcelo Rosende\\code\\Take2\\tst\\Take2.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcelo Rosende\\code\\take2\\tst\\Take2.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Marcelo Rosende\\code\\Take2\\tst\\Take2.Tests.csproj",
         "projectName": "Take2.Tests",
-        "projectPath": "C:\\Users\\Marcelo Rosende\\code\\take2\\tst\\Take2.Tests.csproj",
+        "projectPath": "C:\\Users\\Marcelo Rosende\\code\\Take2\\tst\\Take2.Tests.csproj",
         "packagesPath": "C:\\Users\\Marcelo Rosende\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcelo Rosende\\code\\take2\\tst\\obj\\",
+        "outputPath": "C:\\Users\\Marcelo Rosende\\code\\Take2\\tst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -97,8 +97,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Marcelo Rosende\\code\\take2\\src\\Take2.Source.csproj": {
-                "projectPath": "C:\\Users\\Marcelo Rosende\\code\\take2\\src\\Take2.Source.csproj"
+              "C:\\Users\\Marcelo Rosende\\code\\Take2\\src\\Take2.Source.csproj": {
+                "projectPath": "C:\\Users\\Marcelo Rosende\\code\\Take2\\src\\Take2.Source.csproj"
               }
             }
           }
@@ -133,6 +133,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.11.0, )"
             },
             "xunit": {
               "target": "Package",
