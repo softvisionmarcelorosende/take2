@@ -5,17 +5,17 @@
 <html lang="en">
 <style>
     body {
-        background-color: @Configuration["Take2:Settings:BackgroundColor"]
+        background-color: @ViewData["BackgroundColor"];
     }
     h1 {
-        color: @Configuration["Take2:Settings:FontColor"];
-        font-size: @Configuration["Take2:Settings:FontSize"];
+        color: @ViewData["FontColor"];
+        font-size: @ViewData["FontSize"];
     }
 </style>
 <head>
     <title>Index View</title>
 </head>
 <body>
-    <h1>@Configuration["Take2:Settings:Message"]</h1>
+    <h1>@ViewData["Message"]</h1>
 </body>
 </html>

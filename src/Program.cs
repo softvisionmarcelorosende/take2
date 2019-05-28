@@ -21,11 +21,16 @@ namespace src
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .ConfigureAppConfiguration((hostingContext, config)=>{
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
                     var directory = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                     var settings = config.Build();
-                    config.AddJsonFile(Path.Combine(directory,"azureappconfig.json" ));
-                    config.AddAzureAppConfiguration(settings["ConnectionStrings:AppConfig"]);
+                    //config.AddJsonFile(Path.Combine(directory,"azureappconfig.json" ));
+                    config.AddAzureAppConfiguration(options => options.Connect(settings["ConnectionStrings:AppConfig"])
+                       .Watch("Take2:Settings:BackgroundColor",new TimeSpan(0,0,10))
+                       .Watch("Take2:Settings:FontColor", new TimeSpan(0, 0, 10))
+                       .Watch("Take2:Settings:FontSize", new TimeSpan(0, 0, 10))
+                       .Watch("Take2:Settings:Message", new TimeSpan(0, 0, 10)));
                 })
                 .UseStartup<Startup>();
     }
