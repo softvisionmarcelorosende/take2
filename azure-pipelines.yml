@@ -14,9 +14,9 @@ variables:
 
 steps:
 # Task to install the DotNet Core version to run this yml 
-#- task: DotNetCoreInstaller@0
-#  inputs:
-#    version: '2.2.204' #Replace this with your version of DotNet Core
+- task: DotNetCoreInstaller@0
+  inputs:
+    version: '2.2.204' #Replace this with your version of DotNet Core
 # Same as CLI dotnet restore - Restores packages to run the app 
 # (shouldn't be needed in DotNet Core 2.2 build already does it implicitly)
 - script: dotnet restore
