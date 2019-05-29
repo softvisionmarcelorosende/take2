@@ -9,7 +9,6 @@ namespace Take2.Source.Controllers
     {
         private readonly Settings _settings;
 
-        public HomeController() { }
         public HomeController(IOptionsSnapshot<Settings> settings)
         {
             _settings = settings.Value;
