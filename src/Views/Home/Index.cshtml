@@ -28,37 +28,33 @@
             <div class="col-5 border p-3 ">
                 <form asp-controller="Home" asp-action="AddKey">
                     <h5>Add/Update Key</h5>
-                    <fieldset class="form-group">
                         <div>
                             <label for="AddKey">Key</label>
-                            <input type="text" id="AddKey" value="" class="form-control" placeholder="Please enter your azure key" />
+                            <input type="text" id="AddKey" name="key" value="" class="form-control" placeholder="Please enter your azure key" />
                         </div>
 
                         <div>
                             <label for="AddValue">Value</label>
-                            <input type="text" id="AddValue" value="" class="form-control" placeholder="Please enter your azure key's value" />
+                            <input type="text" id="AddValue" name="value" value="" class="form-control" placeholder="Please enter your azure key's value" />
                         </div>
                         <br />
                         <input type="submit" name="submit" value="Submit" class="btn btn-primary" />
-                    </fieldset>
                 </form>
             </div>
             <div class="col-5 border p-3 offset-1">
                 <form asp-controller="Home" asp-action="DeleteKey">
                     <h5>Delete Key</h5>
-                    <fieldset class="form-group">
                         <div>
                             <label for="DeleteKey">Key Value</label>
-                            <input type="text" id="DeleteKey" value="" class="form-control" placeholder="Please enter your azure key" />
+                            <input type="text" id="DeleteKey" name="key" value="" class="form-control" placeholder="Please enter your azure key" />
                         </div>
                         <br />
                         <input type="submit" name="submit" value="Submit" class="btn btn-primary" />
-                    </fieldset>
                 </form>
             </div>
         </div>
         <br />
-        <div class="col-10 offset-1">
+        <div class="col-9">
             <h5>Key List</h5>
             <table class="table">
                 <tr>

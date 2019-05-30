@@ -54,7 +54,7 @@ namespace Take2.Source.Controllers
                 // Sign the request
                 request.Sign("0-l4-s0:8Koz6Lm3qL2kkyl+4hzq", secret);
 
-                await client.SendAsync(request);
+                var x = await client.SendAsync(request);
                 return RedirectToAction("Index","Home");
             }
         }
