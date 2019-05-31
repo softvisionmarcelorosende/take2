@@ -25,12 +25,11 @@ namespace src
                 {
                     var directory = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                     var settings = config.Build();
-                    //config.AddJsonFile(Path.Combine(directory,"azureappconfig.json" ));
                     config.AddAzureAppConfiguration(options => options.Connect(settings["ConnectionStrings:AppConfig"])
-                       .Watch("Take2:Settings:BackgroundColor", new TimeSpan(0,0,1))
-                       .Watch("Take2:Settings:FontColor", new TimeSpan(0,0,1))
-                       .Watch("Take2:Settings:FontSize", new TimeSpan(0, 0, 1))
-                       .Watch("Take2:Settings:Message", new TimeSpan(0, 0, 1)));
+                       .Watch("Take2:Settings:BackgroundColor", new TimeSpan(0,0,5))
+                       .Watch("Take2:Settings:FontColor", new TimeSpan(0,0,5))
+                       .Watch("Take2:Settings:FontSize", new TimeSpan(0, 0, 5))
+                       .Watch("Take2:Settings:Message", new TimeSpan(0, 0, 5)));
                 })
                 .UseStartup<Startup>();
     }

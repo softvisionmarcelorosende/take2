@@ -18,7 +18,9 @@ namespace Take2.Source.Controllers
     public class HomeController : Controller
     {
         private readonly Settings _settings;
-
+        private readonly string _secret = "vWe9H8LKIniq4qqowh39lJsBzKOreWUGqyxD7Q5ZVh4=";
+        private readonly string _credential = "0-l0-s0:nOglfTcXTxteU6JOUNjA";
+        private readonly string _endpoint = "https://take2appconfiguration.azconfig.io/kv";
         public HomeController(IOptionsSnapshot<Settings> settings)
         {
             _settings = settings.Value;
@@ -32,10 +34,10 @@ namespace Take2.Source.Controllers
             ViewData["Message"] = _settings.Message;
 
 
-            var json =  ListKeys().Result.Content.ReadAsStringAsync().Result;
+            var json = ListKeys().Result.Content.ReadAsStringAsync().Result;
             JObject o = JObject.Parse(json);
             ViewData["Keys"] = JsonConvert.DeserializeObject<List<KeyValue>>(o["items"].ToString());
-            return View(); 
+            return View();
         }
 
         public async Task<IActionResult> AddKey(string key, string value)
@@ -44,18 +46,18 @@ namespace Take2.Source.Controllers
             {
                 var request = new HttpRequestMessage()
                 {
-                    RequestUri = new Uri("https://take2webappconfig.azconfig.io/kv/" + key),
+                    RequestUri = new Uri(_endpoint + "/" + key),
                     Content = new StringContent("{\"value\":\"" + value + "\"}", Encoding.UTF8, "application/json"),
                     Method = HttpMethod.Put
                 };
 
-                byte[] secret = System.Convert.FromBase64String("Kp1fICr9L2U5G8tNiqFkYjfbHdQd+4gTxGfUdM4gv7w=");
+                byte[] secret = System.Convert.FromBase64String(_secret);
                 //
                 // Sign the request
-                request.Sign("0-l4-s0:8Koz6Lm3qL2kkyl+4hzq", secret);
+                request.Sign(_credential, secret);
 
                 var x = await client.SendAsync(request);
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
         }
 
@@ -65,14 +67,14 @@ namespace Take2.Source.Controllers
             {
                 var request = new HttpRequestMessage()
                 {
-                    RequestUri = new Uri("https://take2webappconfig.azconfig.io/kv/" + key),
+                    RequestUri = new Uri(_endpoint + "/" + key),
                     Method = HttpMethod.Delete
                 };
 
-                byte[] secret = System.Convert.FromBase64String("Kp1fICr9L2U5G8tNiqFkYjfbHdQd+4gTxGfUdM4gv7w=");
+                byte[] secret = System.Convert.FromBase64String(_secret);
                 //
                 // Sign the request
-                request.Sign("0-l4-s0:8Koz6Lm3qL2kkyl+4hzq", secret);
+                request.Sign(_credential, secret);
 
                 await client.SendAsync(request);
                 return RedirectToAction("Index", "Home");
@@ -85,14 +87,14 @@ namespace Take2.Source.Controllers
             {
                 var request = new HttpRequestMessage()
                 {
-                    RequestUri = new Uri("https://take2webappconfig.azconfig.io/kv"),
+                    RequestUri = new Uri(_endpoint),
                     Method = HttpMethod.Get
                 };
 
-                byte[] secret = System.Convert.FromBase64String("Kp1fICr9L2U5G8tNiqFkYjfbHdQd+4gTxGfUdM4gv7w=");
+                byte[] secret = System.Convert.FromBase64String(_secret);
                 //
                 // Sign the request
-                request.Sign("0-l4-s0:8Koz6Lm3qL2kkyl+4hzq", secret);
+                request.Sign(_credential, secret);
 
                 return await client.SendAsync(request);
             }
